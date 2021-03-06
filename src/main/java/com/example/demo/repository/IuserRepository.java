@@ -3,18 +3,20 @@ import com.example.demo.model.user;
 // import org.springframework.data.CrudRepository;
 import org.springframework.stereotype.Repository;
 import java.util.List;
+import org.springframework.data.jpa.repository.JpaRepository;
+
 // @Repository
 // public class userRepository {
 
     // public interface IuserRepository {
-  public interface IuserRepository {
+  public interface IuserRepository extends JpaRepository<user, Integer>  {
 
-    void create_user(user u);
+    // user create_user(user u);
 
-    user findUserByEmail(String email);
+    // user findUserById(long id);
 
-    // return all users 
-    List<user> findAll();
+    // // return all users 
+    // List<user> findAll();
     }
     
 
